@@ -25,6 +25,7 @@ The AI does not compute metrics or hallucinate statistics. Every number it state
 **Leagues:** Premier League, La Liga, Bundesliga, Serie A, Ligue 1
 
 **History:** Metric data from 2021-22 onward (post-COVID, consistent tactical context). Historical results and narrative context with no hard floor.
+
 **Special module:** World Cup 2026
 
 ---
