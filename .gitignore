@@ -1,0 +1,55 @@
+# Environment
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# dbt
+euro_analytics/target/
+euro_analytics/dbt_packages/
+euro_analytics/logs/
+euro_analytics/.user.yml
+
+# Data files (never commit raw data)
+*.csv
+*.json
+*.parquet
+*.db
+*.sqlite
+
+# macOS
+.DS_Store
+.AppleDouble
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Node
+node_modules/
+
+# Scraped data artifacts
+data/
+raw_exports/
