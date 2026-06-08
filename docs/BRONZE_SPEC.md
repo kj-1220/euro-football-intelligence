@@ -582,6 +582,7 @@ ingested_at           TIMESTAMP DEFAULT NOW()
 
 #### `euro_raw.fdorg_standings`
 One row per club per matchweek per season. Tier A.
+> SOURCE NOTE: Do not ingest from football-data.org. Reassigned to OpenFootball or FBref.
 ```sql
 id                    SERIAL PRIMARY KEY,
 season                VARCHAR,
@@ -605,6 +606,7 @@ ingested_at           TIMESTAMP DEFAULT NOW()
 
 #### `euro_raw.fdorg_lineups`
 Tier C — 2021-22 floor (coverage inconsistent before this).
+> SOURCE NOTE: Do not ingest from football-data.org. Free tier has no lineup data. Reassigned to StatsBomb or FBref.
 ```sql
 id                    SERIAL PRIMARY KEY,
 match_id              VARCHAR,
@@ -624,6 +626,7 @@ ingested_at           TIMESTAMP DEFAULT NOW()
 
 #### `euro_raw.fdorg_events`
 One row per match event. Tier C — 2021-22 floor.
+> SOURCE NOTE: Do not ingest from football-data.org. Free tier has no event data. Reassigned to StatsBomb or FBref.
 ```sql
 id                    SERIAL PRIMARY KEY,
 event_id              VARCHAR UNIQUE,
@@ -645,6 +648,7 @@ ingested_at           TIMESTAMP DEFAULT NOW()
 
 #### `euro_raw.fdorg_head_to_head`
 Derived from match results. Tier A — deep history.
+> SOURCE NOTE: Silver-derived table. Computed from fdorg_matches in dbt. No Bronze ingestion script needed.
 ```sql
 id                    SERIAL PRIMARY KEY,
 club_a_id             VARCHAR,
@@ -663,6 +667,7 @@ ingested_at           TIMESTAMP DEFAULT NOW()
 
 #### `euro_raw.fdorg_competition_seasons`
 Tier A — tracks competition metadata per season.
+> SOURCE NOTE: Do not ingest from football-data.org. Reassigned to OpenFootball or FBref alongside standings.
 ```sql
 id                    SERIAL PRIMARY KEY,
 competition_id        VARCHAR,
